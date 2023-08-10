@@ -8,9 +8,14 @@ export class App extends Component {
     name: ''
   }
   
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
   handleSubmit(values, {resetForm}) {
-    console.log(values);
     resetForm();
+    console.log(values)
   }
 
   render() {
